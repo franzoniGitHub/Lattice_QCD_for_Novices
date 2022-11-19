@@ -1,5 +1,9 @@
-
- ############## Introduction ##############
+ ############################### Gluonic Path Integrals #######################################
+ 
+ NOTE: a more detailed description may be found in the Doxygen html documentation in
+ the "documentation" directory.
+ 
+ INTRODUCTION
 
  The purpose of this code is to reproduce the third set of excercises in Lepage's
  article "Lattice QCD for Novices". In the simulation phase, gluonic path integrals are evaluated
@@ -26,14 +30,14 @@
 
  The plot routines are given in two versions: plot_macro.C and plot_macro.py.
 
- ############## Requirements ##############
+ REQUIREMENTS
 
  - To compute the results: g++ compiler and a working installation of the Armadillo library
  (download at https://arma.sourceforge.net/download.html)
  - To plot the results: either ROOT (download at https://root.cern/install/) or a working Python
  installation.
 
- ########## How to Build and Run ##########
+ HOW TO BUILD AND RUN
 
   Experiment phase:
   - It is suggested to create a copy of the QCD directory, so as to keep
@@ -53,15 +57,18 @@
     $ ./executable_POST
   - Check the output files
 
- ############## How to plot ###############
+ HOW TO PLOT
 
   - Using ROOT
     $ root plot_macro.C
   - Using Python
     $ python plot_macro.py
 
- ############# How to Clean ###############
+ HOW TO CLEAN
 
   - Remove all the executables
     $ ./CLEAN.sh
   - NOTE: plots and output files are NOT deleted in this procedure
+  
+ FURTHER INFORMATION may be found in the Doxygen html documentation in
+ the "documentation" directory.

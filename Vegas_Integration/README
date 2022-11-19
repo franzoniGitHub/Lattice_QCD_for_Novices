@@ -1,0 +1,32 @@
+############## WARMUP to LATTICE QCD: Harmonic Oscillator ###############
+
+The purpose of this code is to reproduce the first excercise in Lepage's
+article "Lattice QCD for Novices". A harmonic oscillator is explicitely
+path integrated in order to provide estimates of its zero energy and eigenfunction.
+The integration is performed via the Vega routine, as implemented in the GSL
+library.
+
+REQUIREMENTS to compute the results: g++ compiler and working GSL installation.
+REQUIREMENTS to plot the results: either ROOT (Cern) or a working Python installation.
+
+HOW TO BUILD AND RUN
+ -Check and set the parameters in SETTINGS.h
+ -Execute the script BUILD.sh
+   $ ./BUILD.sh
+ -Run the executable
+   $ ./executable
+ -Check the output file
+
+HOW TO PLOT
+ -Using ROOT
+   $ root plot_macro.C
+ -Using Python
+   $ python plot_macro.py
+
+HOW TO CLEAN
+ -Remove all the output \n
+   $ ./CLEAN.sh
+ -NOTE: plots and output files are deleted in this procedure
+
+FURTHER INFORMATION may be found in the Doxygen html documentation in
+the "documentation" directory.

@@ -1,0 +1,12 @@
+Found in header file N = 20
+Found in header file a = 0.5
+Found in header file output_name = output.dat
+Generating plot with following data
+time     deltaE     error
+0.0 0.964996 0.0166135
+0.5 0.964317 0.0256771
+1.0 0.899859 0.0438015
+1.5 0.886911 0.0616595
+2.0 1.02173 0.103848
+2.5 1.40644 0.2755
+3.0 2.1097 1.01556

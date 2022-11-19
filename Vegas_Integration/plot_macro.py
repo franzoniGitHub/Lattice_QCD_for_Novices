@@ -80,7 +80,7 @@ for i in range(n_data):
 
 # Plot all data and a legend
 plt.errorbar(x,result, yerr=error, color='blue', linestyle="None", marker='o', markersize=4, label="Montecarlo data")
-plt.plot(x_fit,y_fit, color='green', marker='None', label="Exact asymptotic for $E_{0}=\frac{1}{2}$")
+plt.plot(x_fit,y_fit, color='green', marker='None', label="Fit to asymptotic function")
 plt.legend(loc='lower center')
 # Set title and x-y axis labels for the Axes
 plt.title("1D Harmonic Oscillator with Vegas", fontsize=18)

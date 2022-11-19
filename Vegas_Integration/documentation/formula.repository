@@ -1,0 +1,7 @@
+\form#0:$Ae^{-S}$
+\form#1:$S$
+\form#2:$A=(\frac{m}{2\pi a})^{N/2}$
+\form#3:$m$
+\form#4:$a=\frac{T}{N}$
+\form#5:\[\left|\left\langle \psi | E_{0}\right\rangle\right|^{2}e^{-E_{0}T}=\sqrt{\pi}e^{-x^{2}-E_{0}T}\]
+\form#6:\[\left|\left\langle \psi | E_{0}\right\rangle\right|^{2}e^{-E_{0}T}=\frac{1}{\sqrt{\pi}}e^{-x^{2}-E_{0}T}\]

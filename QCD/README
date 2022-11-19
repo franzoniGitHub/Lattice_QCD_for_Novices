@@ -1,0 +1,67 @@
+
+ ############## Introduction ##############
+
+ The purpose of this code is to reproduce the third set of excercises in Lepage's
+ article "Lattice QCD for Novices". In the simulation phase, gluonic path integrals are evaluated
+ with the Metropolis algorithm, using two possible versions of the Wilson action: the standard
+ Wilson action and its improved version. For the analysis phase, three options are available for
+ statistics computations: the evaluation of 1x1 and 1x2 Wilson loops, the computation of the
+ quark-quark potential or the expectation value of a user-defined function of the links (as defined
+ in CUSTOM_POST.h). The possibility to split the simulation and the analysis
+ phases is useful to reuse the same Metropolis ensemble for subsequent computations
+ of different observables, thus making the process less time consuming.
+
+ The source code is composed of two programs, QCD_EXP.C and QCD_POST.C. Their purpose is,
+ respectively, to perform an experiment and to later analyse the results. Both these codes are
+ based on the classes my4Vector (for the implementation of operations on position 4-vectors which
+ include periodic boundary conditions), Path (for the definition of a generic lattice
+ configuration) and Metropolis (for the definition of a Metropolis algorithm working on a 4D
+ quantum system with SU3 gauge-symmetry). The classes Path and Metropolis, both rely on the
+ Armadillo library for the use of complex matrices and operations on them. This library is
+ available under the Apache licence (https://opensource.org/licenses/Apache-2.0) and can be
+ downloaded at https://arma.sourceforge.net/download.html. The Armadillo library
+ (http://dx.doi.org/10.21105/joss.00026, https://doi.org/10.1007/978-3-319-96418-8_50) was
+ adopted for its performances, in particular for its optimisation of the matrix operations and
+ the reduction of temporaries.
+
+ The plot routines are given in two versions: plot_macro.C and plot_macro.py.
+
+ ############## Requirements ##############
+
+ - To compute the results: g++ compiler and a working installation of the Armadillo library
+ (download at https://arma.sourceforge.net/download.html)
+ - To plot the results: either ROOT (download at https://root.cern/install/) or a working Python
+ installation.
+
+ ########## How to Build and Run ##########
+
+  Experiment phase:
+  - It is suggested to create a copy of the QCD directory, so as to keep
+    the sequence of experiments separated
+  - Check and set the parameters in SETTINGS_EXP.h
+  - Execute the script BUILD_EXP.sh
+    $ ./BUILD_EXP.sh
+  - Run the executable
+    $ ./executable_EXP
+  - Check the output file
+
+  Postprocessing phase:
+  - Check and set the parameters in SETTINGS_POST.h
+  - Execute the script BUILD_POST.sh
+    $ ./BUILD_POST.sh
+  - Run the executable
+    $ ./executable_POST
+  - Check the output files
+
+ ############## How to plot ###############
+
+  - Using ROOT
+    $ root plot_macro.C
+  - Using Python
+    $ python plot_macro.py
+
+ ############# How to Clean ###############
+
+  - Remove all the executables
+    $ ./CLEAN.sh
+  - NOTE: plots and output files are NOT deleted in this procedure

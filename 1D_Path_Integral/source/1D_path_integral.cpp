@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////////
-///  \file 1D_path_integral.C
+///  \file 1D_path_integral.cpp
 ///  \brief Code to path integrate a 1D quantum system with Montecarlo method
 ///
 ///  In the main function, the physical parameters are set and the
@@ -44,9 +44,9 @@ int main()
 /// excited state energy gap.
 ///
 /// The source code is composed of five files: SETTINGS.h,
-/// CUSTOM.h, Metropolis.h, Metropolis.C and
-/// 1D_path_integral.C \n
-/// The plot routines are given in two versions: plot_macro.C and plot_macro.py.
+/// CUSTOM.h, Metropolis.h, Metropolis.cpp and
+/// 1D_path_integral.cpp \n
+/// The plot routines are given in two versions: plot_macro.cpp and plot_macro.py.
 ///
 /// \section reqs Requirements
 /// - To compute the results: g++ compiler
@@ -66,7 +66,7 @@ int main()
 ///
 /// \section plot How to plot
 ///  - Using ROOT \n
-///    $ root plot_macro.C
+///    $ root plot_macro.cpp
 ///  - Using Python \n
 ///    $ python plot_macro.py
 ///

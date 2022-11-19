@@ -1,1 +1,2 @@
-# Lattice_QCD_for_Novices
+# Lattice QCD for Novices
+

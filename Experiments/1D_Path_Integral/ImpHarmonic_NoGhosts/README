@@ -1,0 +1,37 @@
+############## WARMUP to LATTICE QCD: 1D Montecarlo Path Integration ###############
+
+ The purpose of this code is to reproduce the second excercise in Lepage's
+ article "Lattice QCD for Novices". A 1D quantum system is path integrated
+ using the Montecarlo algorithm in order to provide estimates of first
+ excited state energy gap.
+
+ The source code is composed of five files: SETTINGS.h, CUSTOM.h, Metropolis.h, Metropolis.C and 1D_path_integral.C
+ The plot routines are given in two versions: plot_macro.C and plot_macro.py.
+
+ REQUIREMENTS
+  - To compute the results: g++ compiler
+  - To plot the results: either ROOT (download at https://root.cern/install/) or a working Python installation.
+
+ HOW TO BUILD AND RUN
+  - It is suggested to create a copy of the 1D_path_integral directory, so as to keep
+    the sequence of experiments separated
+  - Provide the system definition and the required observables in CUSTOM.h
+  - Check and set the parameters in SETTINGS.h
+  - Execute the script BUILD.sh \n
+    $ ./BUILD.sh
+  - Run the executable \n
+    $ ./executable
+  - Check the output file
+
+ HOW TO PLOT
+  - Using ROOT
+    $ root plot_macro.C
+  - Using Python
+    $ python plot_macro.py
+
+ HOW TO CLEAN
+  - Remove all the output \n
+    $ ./CLEAN.sh
+  - NOTE: plots and output files are deleted in this procedure
+
+ FURTHER INFORMATION may be found in the Doxygen html documentation in the "documentation" directory

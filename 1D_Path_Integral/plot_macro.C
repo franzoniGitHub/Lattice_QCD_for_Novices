@@ -1,13 +1,13 @@
 ///////////////////////////////////////////////////////////
-/// \file plot_macro.C
+/// \file plot_macro.cpp
 /// \brief ROOT macro to generate a plot from the
-///        1D_path_integral.C output.
+///        1D_path_integral.cpp output.
 ///
 ///  ROOT macro to generate a plot from the
-///  1D_path_integral.C output of the method
+///  1D_path_integral.cpp output of the method
 ///  Metropolis::ComputeEnergyEstimators. Various graphical
 ///  options are implemented and tuned in the code. Type:\n
-///  $ ROOT plot_macro.C\n
+///  $ ROOT plot_macro.cpp\n
 ///  to run and generate the plot "plot_ROOT.png".
 ///
 ///////////////////////////////////////////////////////////

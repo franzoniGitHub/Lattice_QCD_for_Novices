@@ -1,7 +1,7 @@
  ############################### Gluonic Path Integrals #######################################
  
- NOTE: a more detailed description may be found in the Doxygen html documentation in
- the "documentation" directory.
+ NOTE: a more detailed description may be found in the Doxygen html documentation using the
+ the documentation.html link.
  
  INTRODUCTION
 
@@ -70,5 +70,5 @@
     $ ./CLEAN.sh
   - NOTE: plots and output files are NOT deleted in this procedure
   
- FURTHER INFORMATION may be found in the Doxygen html documentation in
- the "documentation" directory.
+ FURTHER INFORMATION may be found in the Doxygen html documentation using the
+ documentation.html link.

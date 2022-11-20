@@ -1,0 +1,9 @@
+\form#0:$U_{\mu}(x)$
+\form#1:\[S=-\beta\sum_{x,\mu>\nu}{P_{\mu\nu}}\]
+\form#2:$P_{\mu\nu}$
+\form#3:$\beta=\tilde{\beta}/u_{0}^{4}$
+\form#4:$u_{0}^{4}$
+\form#5:$R_{\mu\nu}$
+\form#6:\[S=-\tilde{\beta}\sum_{x,\mu>\nu}{\frac{5}{3}\frac{P_{\mu\nu}}{u_{0}^{4}}- \frac{R_{\mu\nu}+R_{\nu\mu}}{12u_{0}^{6}}}\]
+\form#7:$\sigma$
+\form#8:\[V(r)=\sigma r-\frac{b}{r}+c\]

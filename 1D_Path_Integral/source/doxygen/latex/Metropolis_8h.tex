@@ -1,0 +1,35 @@
+\hypertarget{Metropolis_8h}{}\section{Metropolis.\+h File Reference}
+\label{Metropolis_8h}\index{Metropolis.\+h@{Metropolis.\+h}}
+
+
+Header file for the definition of the class \hyperlink{classMetropolis}{Metropolis}.  
+
+
+{\ttfamily \#include $<$vector$>$}\newline
+Include dependency graph for Metropolis.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{Metropolis_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{Metropolis_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classMetropolis}{Metropolis}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for the definition of the class \hyperlink{classMetropolis}{Metropolis}. 
+
+Header file containing the definitions of the attributes and members of the class \hyperlink{classMetropolis}{Metropolis}. The instances of this class represent an implementation of the \hyperlink{classMetropolis}{Metropolis} algorithm for a physical quantum system in 1D via path integral formalism. The physical system is described by its euclidean action S, defined in the function \hyperlink{classMetropolis_afb509c80a84817bf9b4ff183e02a44cb}{Metropolis\+::S} and implemented in the \hyperlink{CUSTOM_8h}{C\+U\+S\+T\+O\+M.\+h} file. The observable Gamma, whose implementation is in the same \hyperlink{CUSTOM_8h}{C\+U\+S\+T\+O\+M.\+h} file, is estimated by averaging over the Montecarlo ensemble\+: the estimators for the chosen Gamma are readily provided by the method Metropolis\+::\+Compute\+Estimators. In addition, an estimate of the energy gap as a function of time can be obtained via \hyperlink{classMetropolis_a197d44f9109ce75781a70441f1d0b2b2}{Metropolis\+::\+Compute\+Energy\+Estimators} using the propagator defined in \hyperlink{CUSTOM_8h}{C\+U\+S\+T\+O\+M.\+h}\+: in this case, averages and standard deviations of the bootstrap copies of the Montecarlo ensemble are used. These separate implementations aim at providing flexibility both for choice of the physical system and that of the observable. Further comments may be found in the implementation file of this class. 

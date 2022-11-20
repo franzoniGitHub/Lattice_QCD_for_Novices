@@ -1,0 +1,34 @@
+\hypertarget{index_intro}{}\section{Introduction}\label{index_intro}
+The purpose of this code is to reproduce the second excercise in Lepage\textquotesingle{}s article \char`\"{}\+Lattice Q\+C\+D for Novices\char`\"{}. A 1D quantum system is path integrated using the Montecarlo algorithm in order to provide estimates of first excited state energy gap.
+
+The source code is composed of five files\+: \hyperlink{SETTINGS_8h}{S\+E\+T\+T\+I\+N\+G\+S.\+h}, \hyperlink{CUSTOM_8h}{C\+U\+S\+T\+O\+M.\+h}, \hyperlink{Metropolis_8h}{Metropolis.\+h}, Metropolis.\+cpp and \hyperlink{1D__path__integral_8cpp}{1\+D\+\_\+path\+\_\+integral.\+cpp} ~\newline
+The plot routines are given in two versions\+: \hyperlink{plot__macro_8cpp}{plot\+\_\+macro.\+cpp} and \hyperlink{plot__macro_8py}{plot\+\_\+macro.\+py}.\hypertarget{index_reqs}{}\section{Requirements}\label{index_reqs}
+
+\begin{DoxyItemize}
+\item To compute the results\+: g++ compiler
+\item To plot the results\+: either R\+O\+OT (download at \href{https://root.cern/install/}{\tt https\+://root.\+cern/install/}) or a working Python installation.
+\end{DoxyItemize}\hypertarget{index_build}{}\section{How to Build and Run}\label{index_build}
+
+\begin{DoxyItemize}
+\item It is suggested to create a copy of the 1\+D\+\_\+path\+\_\+integral directory, so as to keep the sequence of experiments separated
+\item Provide the system definition and the required observables in \hyperlink{CUSTOM_8h}{C\+U\+S\+T\+O\+M.\+h}
+\item Check and set the parameters in \hyperlink{SETTINGS_8h}{S\+E\+T\+T\+I\+N\+G\+S.\+h}
+\item Execute the script B\+U\+I\+L\+D.\+sh ~\newline
+ \$ ./\+B\+U\+I\+LD.sh
+\item Run the executable ~\newline
+ \$ ./executable
+\item Check the output file
+\end{DoxyItemize}\hypertarget{index_plot}{}\section{How to plot}\label{index_plot}
+
+\begin{DoxyItemize}
+\item Using R\+O\+OT ~\newline
+ \$ root \hyperlink{plot__macro_8cpp}{plot\+\_\+macro.\+cpp}
+\item Using Python ~\newline
+ \$ python \hyperlink{plot__macro_8py}{plot\+\_\+macro.\+py}
+\end{DoxyItemize}\hypertarget{index_clean}{}\section{How to Clean}\label{index_clean}
+
+\begin{DoxyItemize}
+\item Remove all the output ~\newline
+ \$ ./\+C\+L\+E\+AN.sh
+\item N\+O\+TE\+: plots and output files are deleted in this procedure 
+\end{DoxyItemize}

@@ -1,0 +1,45 @@
+\hypertarget{SETTINGS_8h}{}\section{S\+E\+T\+T\+I\+N\+G\+S.\+h File Reference}
+\label{SETTINGS_8h}\index{S\+E\+T\+T\+I\+N\+G\+S.\+h@{S\+E\+T\+T\+I\+N\+G\+S.\+h}}
+
+
+Header file to set the adjustable parameters of the system.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{SETTINGS_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{SETTINGS_8h_a7722c8ecbb62d99aee7ce68b1752f337}\label{SETTINGS_8h_a7722c8ecbb62d99aee7ce68b1752f337}} 
+int \hyperlink{SETTINGS_8h_a7722c8ecbb62d99aee7ce68b1752f337}{N} = 20
+\begin{DoxyCompactList}\small\item\em Number of sites. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{SETTINGS_8h_a12bee834e3763c6d1de9a130cd451aed}\label{SETTINGS_8h_a12bee834e3763c6d1de9a130cd451aed}} 
+int \hyperlink{SETTINGS_8h_a12bee834e3763c6d1de9a130cd451aed}{Ncorr} = 20
+\begin{DoxyCompactList}\small\item\em Number of correlated path configurations to skip before next acquisition. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{SETTINGS_8h_aec02ce37912e1f500d7eb7fb3c8b6e1f}\label{SETTINGS_8h_aec02ce37912e1f500d7eb7fb3c8b6e1f}} 
+int \hyperlink{SETTINGS_8h_aec02ce37912e1f500d7eb7fb3c8b6e1f}{Ncf} = 10000
+\begin{DoxyCompactList}\small\item\em Total number of path configurations to be sampled. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{SETTINGS_8h_a71e3c918b5180d769d66c9f9868db86b}\label{SETTINGS_8h_a71e3c918b5180d769d66c9f9868db86b}} 
+int \hyperlink{SETTINGS_8h_a71e3c918b5180d769d66c9f9868db86b}{N\+Boot\+Straps} = 100
+\begin{DoxyCompactList}\small\item\em Number of bootstraps to perform on the Ncf configurations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{SETTINGS_8h_a4904cc82627458fdf6672ccc0b2802c7}\label{SETTINGS_8h_a4904cc82627458fdf6672ccc0b2802c7}} 
+double \hyperlink{SETTINGS_8h_a4904cc82627458fdf6672ccc0b2802c7}{epsilon} = 1.\+4
+\begin{DoxyCompactList}\small\item\em Typical magnitude of a path update. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{SETTINGS_8h_a1031d0e0a97a340abfe0a6ab9e831045}\label{SETTINGS_8h_a1031d0e0a97a340abfe0a6ab9e831045}} 
+double \hyperlink{SETTINGS_8h_a1031d0e0a97a340abfe0a6ab9e831045}{a} = 0.\+5
+\begin{DoxyCompactList}\small\item\em Time discretization, i.\+e. grid spacing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{SETTINGS_8h_a4bfaa4b497cb5e62d0cfc56f5ce8cfc9}\label{SETTINGS_8h_a4bfaa4b497cb5e62d0cfc56f5ce8cfc9}} 
+std\+::string \hyperlink{SETTINGS_8h_a4bfaa4b497cb5e62d0cfc56f5ce8cfc9}{output\+\_\+name} = \char`\"{}Ncf\+\_\+10000\+\_\+100\+B.\+dat\char`\"{}
+\begin{DoxyCompactList}\small\item\em Output filename (relative to this directory) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Header file to set the adjustable parameters of the system. 
+
+Set here the parameters of the system, namely\+: the number of sites N, the number of correlated path configurations to skip Ncorr, the number of path configurations to be sampled Ncf, the number of bootstrap copies N\+Boot\+Straps, the magnitude of a path update epsilon, the time spacing a and the output filename output\+\_\+name. If you wish to run the \hyperlink{classMetropolis_aa733da324aa14e6c2fcf9c75f5643cbe}{Metropolis\+::\+Compute\+Binned\+Energy\+Estimators} method, make sure to define also the integer for the bin size. 

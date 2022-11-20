@@ -34,4 +34,5 @@
     $ ./CLEAN.sh
   - NOTE: plots and output files are deleted in this procedure
 
- FURTHER INFORMATION may be found in the Doxygen html documentation in the "documentation" directory
+ FURTHER INFORMATION may be found in the Doxygen html documentation using the
+ documentation.html link.

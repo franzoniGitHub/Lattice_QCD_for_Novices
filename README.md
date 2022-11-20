@@ -16,7 +16,7 @@ The repository is organized in the following main directories:
 
 ## Documentation
 
-More detailed code documentations may be found in the code directories (Vegas_Integration, 1D_Path_Integration, QCD) in the "documentation" directory as a html, Doxygen-generated documentation.
+More detailed code documentations may be found in the code directories (Vegas_Integration, 1D_Path_Integration, QCD) using the documentation.html link as a html, Doxygen-generated documentation.
 
 ---
 

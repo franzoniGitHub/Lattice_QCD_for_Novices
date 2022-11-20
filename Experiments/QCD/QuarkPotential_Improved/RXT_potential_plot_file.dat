@@ -1,0 +1,22 @@
+########## SETTINGS RECAP ##########
+Lattice dimension: 8  8  8  8
+Number of SU3: 100
+Number of correlated configurations to skip: 50
+Number of updates on each link variable: 10
+Number of sampled configurations: 10
+Grid spacing: 0.25
+Beta: 5.5
+Beta_tilde: 1.719
+u0 coefficient: 0.797
+Improved? true
+####################################
+
+Potential aV(r)
+First column: r/a    Second column: aV(r)   Third column: sigma(aV(r))
+1	1.88414	0.101064
+2	3.18996	0.416338
+3	3.65243	0.766583
+4	1.99447	0.817207
+5	3.94391	10.6564
+6	-0.670473	1.16494
+7	-0.650741	0.779589

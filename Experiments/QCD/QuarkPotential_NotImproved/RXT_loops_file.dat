@@ -1,0 +1,20 @@
+########## SETTINGS RECAP ##########
+Lattice dimension: 8  8  8  8
+Number of SU3: 100
+Number of correlated configurations to skip: 50
+Number of updates on each link variable: 10
+Number of sampled configurations: 10
+Grid spacing: 0.25
+Beta: 5.5
+Beta_tilde: 1.719
+u0 coefficient: 0.797
+Improved? false
+####################################
+
+rxt planar Wilson loop expectation values (the format is -> value:error)
+Vertical: t/a      Horizontal: r/a
+	1	2	3
+1	0.724455:0.00175979	0.550564:0.0029685	0.421402:0.00367932
+2	0.393332:0.00181078	0.177954:0.00191971	0.0815657:0.00188686
+3	0.206429:0.00204694	0.0555618:0.00120934	0.0148673:0.00113336
+4	0.108657:0.00195773	0.0183408:0.00115123	0.00385203:0.000867449

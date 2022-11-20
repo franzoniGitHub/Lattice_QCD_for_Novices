@@ -1,0 +1,7 @@
+Computing 1x1 and 2x1 plaquettes expectation values..
+Progress %: 0 - 10 - 20 - 30 - 40 - 50 - 60 - 70 - 80 - 90 - 100
+End of statistics computation
+Results:
+square plaquette =   0.500213  +/-  0.00107755
+rectangular plaquette =   0.263393  +/-  0.00134821
+Execution time: 0.0446551 min

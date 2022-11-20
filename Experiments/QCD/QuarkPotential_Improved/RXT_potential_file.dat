@@ -1,0 +1,19 @@
+########## SETTINGS RECAP ##########
+Lattice dimension: 8  8  8  8
+Number of SU3: 100
+Number of correlated configurations to skip: 50
+Number of updates on each link variable: 10
+Number of sampled configurations: 10
+Grid spacing: 0.25
+Beta: 5.5
+Beta_tilde: 1.719
+u0 coefficient: 0.797
+Improved? true
+####################################
+
+Ratio W(r,t)/W(r,t+a) (the format is -> value:error)
+Vertical: t/a        Horizontal: r/a
+	1	2	3	4	5	6	7
+1	1.7881:0.0822867	3.07347:0.262191	5.01321:0.609504	7.70283:1.21979	12.0856:2.65168	17.6989:5.39769	20.1633:9.29727
+2	1.84879:0.0913572	3.05026:0.287764	4.56666:0.582287	6.85468:1.68109	8.93797:6.77282	8.88974:13.4247	3.60294:4.07125
+3	1.88414:0.101064	3.18996:0.416338	3.65243:0.766583	1.99447:0.817207	3.94391:10.6564	-0.670473:1.16494	-0.650741:0.779589

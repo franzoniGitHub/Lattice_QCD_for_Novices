@@ -1,0 +1,32 @@
+# INPUT/OUTPUT FILES
+OUTPUT = ../executable_POST
+MY4VECTOR_CLASS = my4Vector
+PATH_CLASS = Path
+METROPOLIS_CLASS = Metropolis
+SETTINGS = ../SETTINGS_POST
+MAIN = QCD_POST
+
+# FLAGS
+CFLAGS = -std=c++11 -g -O2 -Wall
+ARMADILLO = -larmadillo
+CC = g++
+
+all: $(OUTPUT)
+
+$(OUTPUT): my4vector.o path.o metropolis.o main_post.o
+	$(CC) $(CFLAGS) -o $(OUTPUT) my4vector.o path.o metropolis.o main_post.o $(ARMADILLO)
+
+my4vector.o: $(MY4VECTOR_CLASS).cpp $(MY4VECTOR_CLASS).h
+	$(CC) -c $(CFLAGS) -o my4vector.o $(MY4VECTOR_CLASS).cpp
+
+path.o:	$(PATH_CLASS).cpp $(PATH_CLASS).h
+	$(CC) -c $(CFLAGS) -o path.o $(PATH_CLASS).cpp
+
+metropolis.o: $(METROPOLIS_CLASS).cpp $(METROPOLIS_CLASS).h
+	$(CC) -c $(CFLAGS) -o metropolis.o $(METROPOLIS_CLASS).cpp
+
+main_post.o: $(MAIN).cpp $(MY4VECTOR_CLASS).h $(PATH_CLASS).h $(METROPOLIS_CLASS).h $(SETTINGS).h
+	$(CC) -c $(CFLAGS) -o main_post.o $(MAIN).cpp
+
+clean:
+	rm *.o $(OUTPUT)

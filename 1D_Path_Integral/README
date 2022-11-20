@@ -25,7 +25,7 @@
 
  HOW TO PLOT
   - Using ROOT
-    $ root plot_macro.C
+    $ root plot_macro.cpp
   - Using Python
     $ python plot_macro.py
 

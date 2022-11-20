@@ -1,9 +1,9 @@
 ## @file plot_macro.py
 #Python code to generate a plot from the
-# 1D_path_integral.C output.
+# 1D_path_integral.cpp output.
 #
 #Python code to generate a plot from the
-# 1D_path_integral.C output of the method
+# 1D_path_integral.cpp output of the method
 #Metropolis::ComputeEnergyEstimators().Various graphical
 #options are implemented and tuned in the code.Type :\n
 #$ python plot_macro.py\n

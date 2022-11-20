@@ -1,5 +1,5 @@
 #!/bin/bash
-g++ source/Metropolis.C source/1D_path_integral.C -o executable
+g++ source/Metropolis.cpp source/1D_path_integral.cpp -o executable
 
 for (( i = 0 ; i <= 20 ; i += 1 )) ; do
   echo "Step n.$i"

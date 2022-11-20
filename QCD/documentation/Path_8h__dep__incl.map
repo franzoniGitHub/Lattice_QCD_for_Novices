@@ -1,6 +1,0 @@
-<map id="Path.h" name="Path.h">
-<area shape="rect" id="node2" href="$Metropolis_8h.html" title="Header file for the definition of the class Metropolis. " alt="" coords="97,80,190,107"/>
-<area shape="rect" id="node3" href="$QCD__EXP_8C.html" title="Code to path integrate a gluonic system with Montecarlo method. " alt="" coords="5,155,105,181"/>
-<area shape="rect" id="node4" href="$QCD__POST_8C.html" title="Code to analyse the output from QCD_EXP.C and provide Montecarlo estimates. " alt="" coords="198,229,307,256"/>
-<area shape="rect" id="node5" href="$SETTINGS__POST_8h.html" title="Header file to set the adjustable parameters for the postprocessing code. " alt="" coords="181,155,324,181"/>
-</map>

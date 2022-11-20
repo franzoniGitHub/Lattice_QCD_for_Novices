@@ -15,7 +15,7 @@
  phases is useful to reuse the same Metropolis ensemble for subsequent computations
  of different observables, thus making the process less time consuming.
 
- The source code is composed of two programs, QCD_EXP.C and QCD_POST.C. Their purpose is,
+ The source code is composed of two programs, QCD_EXP.cpp and QCD_POST.cpp. Their purpose is,
  respectively, to perform an experiment and to later analyse the results. Both these codes are
  based on the classes my4Vector (for the implementation of operations on position 4-vectors which
  include periodic boundary conditions), Path (for the definition of a generic lattice
@@ -28,7 +28,7 @@
  adopted for its performances, in particular for its optimisation of the matrix operations and
  the reduction of temporaries.
 
- The plot routines are given in two versions: plot_macro.C and plot_macro.py.
+ The plot routines are given in two versions: plot_macro.cpp and plot_macro.py.
 
  REQUIREMENTS
 
@@ -60,7 +60,7 @@
  HOW TO PLOT
 
   - Using ROOT
-    $ root plot_macro.C
+    $ root plot_macro.cpp
   - Using Python
     $ python plot_macro.py
 

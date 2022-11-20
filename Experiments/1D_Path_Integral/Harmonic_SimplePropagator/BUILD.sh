@@ -1,2 +1,2 @@
 #!/bin/bash
-g++ source/Metropolis.C source/1D_path_integral.C -o executable
+g++ source/Metropolis.cpp source/1D_path_integral.cpp -o executable

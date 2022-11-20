@@ -1,9 +1,9 @@
 ## @file plot_macro.py
 # Python code to generate a plot from the
-# VegasHarmOsc.C output.
+# VegasHarmOsc.cpp output.
 #
 # Python code to generate a plot from the
-# VegasHarmOsc.C output. This macro also performs
+# VegasHarmOsc.cpp output. This macro also performs
 # a fit to the function fitplot_py(), providing an
 # estimate for the ground energy E_0. Various graphical
 # options are implemented and tuned in the code. Type:\n

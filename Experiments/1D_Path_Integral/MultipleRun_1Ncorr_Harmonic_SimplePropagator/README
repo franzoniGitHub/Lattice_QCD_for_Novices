@@ -5,8 +5,8 @@
  using the Montecarlo algorithm in order to provide estimates of first
  excited state energy gap.
 
- The source code is composed of five files: SETTINGS.h, CUSTOM.h, Metropolis.h, Metropolis.C and 1D_path_integral.C
- The plot routines are given in two versions: plot_macro.C and plot_macro.py.
+ The source code is composed of five files: SETTINGS.h, CUSTOM.h, Metropolis.h, Metropolis.cpp and 1D_path_integral.cpp
+ The plot routines are given in two versions: plot_macro.cpp and plot_macro.py.
 
  REQUIREMENTS
   - To compute the results: g++ compiler
@@ -25,7 +25,7 @@
 
  HOW TO PLOT
   - Using ROOT
-    $ root plot_macro.C
+    $ root plot_macro.cpp
   - Using Python
     $ python plot_macro.py
 

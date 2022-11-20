@@ -16,17 +16,17 @@ all: $(OUTPUT)
 $(OUTPUT): my4vector.o path.o metropolis.o main_exp.o
 	$(CC) $(CFLAGS) -o $(OUTPUT) my4vector.o path.o metropolis.o main_exp.o $(ARMADILLO)
 
-my4vector.o: $(MY4VECTOR_CLASS).C $(MY4VECTOR_CLASS).h
-	$(CC) -c $(CFLAGS) -o my4vector.o $(MY4VECTOR_CLASS).C
+my4vector.o: $(MY4VECTOR_CLASS).cpp $(MY4VECTOR_CLASS).h
+	$(CC) -c $(CFLAGS) -o my4vector.o $(MY4VECTOR_CLASS).cpp
 
-path.o:	$(PATH_CLASS).C $(PATH_CLASS).h
-	$(CC) -c $(CFLAGS) -o path.o $(PATH_CLASS).C
+path.o:	$(PATH_CLASS).cpp $(PATH_CLASS).h
+	$(CC) -c $(CFLAGS) -o path.o $(PATH_CLASS).cpp
 
-metropolis.o: $(METROPOLIS_CLASS).C $(METROPOLIS_CLASS).h
-	$(CC) -c $(CFLAGS) -o metropolis.o $(METROPOLIS_CLASS).C
+metropolis.o: $(METROPOLIS_CLASS).cpp $(METROPOLIS_CLASS).h
+	$(CC) -c $(CFLAGS) -o metropolis.o $(METROPOLIS_CLASS).cpp
 
-main_exp.o: $(MAIN).C $(MY4VECTOR_CLASS).h $(PATH_CLASS).h $(METROPOLIS_CLASS).h $(SETTINGS).h
-	$(CC) -c $(CFLAGS) -o main_exp.o $(MAIN).C
+main_exp.o: $(MAIN).cpp $(MY4VECTOR_CLASS).h $(PATH_CLASS).h $(METROPOLIS_CLASS).h $(SETTINGS).h
+	$(CC) -c $(CFLAGS) -o main_exp.o $(MAIN).cpp
 
 clean:
 	rm *.o $(OUTPUT)

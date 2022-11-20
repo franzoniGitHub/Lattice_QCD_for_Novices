@@ -1,10 +1,10 @@
 ## @file plot_macro.py
 #
 #  @brief Python macro to generate a plot from the
-#         QCD_POST.C output.
+#         QCD_POST.cpp output.
 #
 #  Python macro to generate a plot from the
-#  QCD_POST.C output of the method
+#  QCD_POST.cpp output of the method
 #  Metropolis::ComputeRxTWilsonLoops which is stored in the file
 #  RXT_potential_plot_file.dat. Various graphical
 #  options are implemented and tuned in the code. Type:\n

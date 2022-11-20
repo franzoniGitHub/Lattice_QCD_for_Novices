@@ -4,7 +4,7 @@
 
 This repository contains the source codes and worked experiments of the exercises proposed in "Lattice QCD for Novices" by G.P. Lepage.
 The original paper can be downloaded at the following link on [arXiv](https://arxiv.org/abs/hep-lat/0506036v1). The codes are mainly written in C++,
-with a small component in Python (to produce plots) a some Bash scripts and Makefiles to build and run the applications.
+with a small component in Python (to produce plots) and a few Bash scripts and Makefiles to build and run the applications.
 
 ## Structure
 

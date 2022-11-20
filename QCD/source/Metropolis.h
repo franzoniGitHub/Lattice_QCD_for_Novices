@@ -243,7 +243,7 @@ class Metropolis
   /// and an estimate of the quark-quark potential using the time-asymptotic value of the ratio. All
   /// the quantities are printed in separate files, respectively, RXT_loops_file.dat,
   /// RXT_potential_file.dat and RXT_potential_plot_file.dat. The last file is used as input file in
-  /// the ROOT and python plotting macros. \see plot_macro.C, plot_macro.py
+  /// the ROOT and python plotting macros. \see plot_macro.cpp, plot_macro.py
   void ComputeRxTWilsonLoops() const;
 
   /// Compute the expectation value of a custom function

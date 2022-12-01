@@ -27,11 +27,11 @@ double smear_par = 1. / 12.;                               ///< Smearing paramet
 /// Type of analysis
 ///
 /// Type of analysis to perform on the input data. The possible choices are the following:
-/// Type::PlaquetteRectangule -> Compute 1x1 and 1x2 Wilson loops expectation values
+/// Type::PlaquetteRectangle -> Compute 1x1 and 1x2 Wilson loops expectation values
 /// Type::QuarkPotential -> Compute quark-quark potential, draw plot and fit using ROOT
 /// Type::Custom -> Define in CUSTOM_POST.h a function of the link variables whose expectation value
 /// is to be computed \see Type
-Type my_type = Type::PlaquetteRectangule;
+Type my_type = Type::PlaquetteRectangle;
 
 //************** END PARAMETERS *******************//
 

@@ -22,7 +22,7 @@ using namespace arma;
 /// Enum class which collects the available types of analysis for the method
 /// Metropolis::ComputeStatistics.
 enum class Type {
-  PlaquetteRectangule,  ///< Select the 1x1 and 1x2 Wilson loops expectation values
+  PlaquetteRectangle,  ///< Select the 1x1 and 1x2 Wilson loops expectation values
   QuarkPotential,       ///< Select the quark potential computation
   Custom                ///< Select a customized analysis, as defined in CUSTOM_POST.h
 };
@@ -232,9 +232,9 @@ class Metropolis
 
   /// Compute the 1x1 and 1x2 Wilson loop expectation values
   ///
-  /// Compute plaquette (1x1) and rectangule (1x2) expectation values on the current fResult
+  /// Compute plaquette (1x1) and rectangle (1x2) expectation values on the current fResult
   /// and print the results on the standard output.
-  void ComputePlaquetteRectangule() const;
+  void ComputePlaquetteRectangle() const;
 
   /// Compute the RxT Wilson loop expectation values
   ///

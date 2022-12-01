@@ -368,13 +368,13 @@ void Metropolis::RandomizeSU3()
   }
 }
 
-// Compute plaquette and rectangule expectation values
-void Metropolis::ComputePlaquetteRectangule() const
+// Compute plaquette and rectangle expectation values
+void Metropolis::ComputePlaquetteRectangle() const
 {
   std::cout << "Computing 1x1 and 2x1 plaquettes expectation values..\nProgress %: " << std::flush;
 
   std::vector<int> n = fPath.GetNCells();
-  std::vector<double> estimators = {0., 0.};  // First= axa plaquette; Second=ax2a rectangule
+  std::vector<double> estimators = {0., 0.};  // First= axa plaquette; Second=ax2a rectangle
   std::vector<double> errors = {0., 0.};      // Same as above
   std::vector<double> square_estimators = {0., 0.};
   std::vector<double> old_estimators = {0., 0.};
@@ -682,8 +682,8 @@ double Metropolis::WilsonLoop(int N_mu, int N_nu, int mu, int nu, const my4Vecto
 void Metropolis::ComputeStatistics(Type type) const
 {
   switch (type) {
-    case Type::PlaquetteRectangule: {
-      ComputePlaquetteRectangule();
+    case Type::PlaquetteRectangle: {
+      ComputePlaquetteRectangle();
       break;
     }
     case Type::QuarkPotential: {

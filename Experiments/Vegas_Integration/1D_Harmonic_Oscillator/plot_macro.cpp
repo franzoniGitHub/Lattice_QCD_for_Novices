@@ -58,7 +58,7 @@ int plot_macro()
 
   // Initialize a canvas and a pad and set their attributes
   TCanvas* c = new TCanvas("c", "Data and Fit", 800, 800);
-  gStyle->SetOptFit(1011);
+  gStyle->SetOptFit(11);
   gPad->SetGrid(1, 1);
   TPad* mypad = new TPad("mypad", "mypad", 0., 0., 1., 1.);
   mypad->Draw();

@@ -78,22 +78,20 @@ $(function() {
 Include dependency graph for plot_macro.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="plot__macro_8cpp__incl.png" border="0" usemap="#plot__macro_8cpp" alt=""/></div>
-<map name="plot__macro_8cpp" id="plot__macro_8cpp">
-</map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ad69f9dbc43742889c2603d41075bd152"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="plot__macro_8cpp.html#ad69f9dbc43742889c2603d41075bd152">fitfunction</a> (double *x, double *par)</td></tr>
 <tr class="separator:ad69f9dbc43742889c2603d41075bd152"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a255fa7aeb1f7c313b60d436731a7a17e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="plot__macro_8cpp.html#a255fa7aeb1f7c313b60d436731a7a17e">plot_macro</a> ()</td></tr>
-<tr class="separator:a255fa7aeb1f7c313b60d436731a7a17e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a382bcf4b4422cd8760a8ca6f47cf725b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="plot__macro_8cpp.html#a382bcf4b4422cd8760a8ca6f47cf725b">plot_macro</a> (int time, int r_max)</td></tr>
+<tr class="separator:a382bcf4b4422cd8760a8ca6f47cf725b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>ROOT macro to generate a plot from the <a class="el" href="QCD__POST_8cpp.html" title="Code to analyse the output from QCD_EXP.cpp and provide Montecarlo estimates. ">QCD_POST.cpp</a> output. </p>
 <p>ROOT macro to generate a plot from the <a class="el" href="QCD__POST_8cpp.html" title="Code to analyse the output from QCD_EXP.cpp and provide Montecarlo estimates. ">QCD_POST.cpp</a> output of the method <a class="el" href="classMetropolis.html#a15bb44be015c390ba17ce0c0636fc053">Metropolis::ComputeRxTWilsonLoops</a> which is stored in the file RXT_potential_plot_file.dat. Various graphical options are implemented and tuned in the code. Type:<br />
- $ root <a class="el" href="plot__macro_8cpp.html" title="ROOT macro to generate a plot from the QCD_POST.cpp output. ">plot_macro.cpp</a><br />
- to run and generate the plot "QuarkPotential_root.png". </p>
+ $ root 'plot_macro.cpp(time, r_max)'<br />
+ to run and generate the plot "QuarkPotential_root.png" (note: time and r_max are the arguments of <a class="el" href="plot__macro_8cpp.html#a382bcf4b4422cd8760a8ca6f47cf725b">plot_macro()</a>). </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="ad69f9dbc43742889c2603d41075bd152"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad69f9dbc43742889c2603d41075bd152">&#9670;&nbsp;</a></span>fitfunction()</h2>
@@ -135,8 +133,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a255fa7aeb1f7c313b60d436731a7a17e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a255fa7aeb1f7c313b60d436731a7a17e">&#9670;&nbsp;</a></span>plot_macro()</h2>
+<a id="a382bcf4b4422cd8760a8ca6f47cf725b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a382bcf4b4422cd8760a8ca6f47cf725b">&#9670;&nbsp;</a></span>plot_macro()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -144,13 +142,30 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int plot_macro </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>time</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>r_max</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Plot macro</p>
-<p>Main function of the plot macro </p>
+<p>Main function of the plot macro </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time</td><td>time in lattice spacing units at which the asymptotic estimate for the potential is extracted </td></tr>
+    <tr><td class="paramname">r_max</td><td>maximum value of the coordinate r in lattice spacing units to display on the plot </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

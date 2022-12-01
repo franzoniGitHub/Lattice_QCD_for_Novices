@@ -8,8 +8,9 @@
 ///  Metropolis::ComputeRxTWilsonLoops which is stored in the file
 ///  RXT_potential_plot_file.dat. Various graphical
 ///  options are implemented and tuned in the code. Type:\n
-///  $ root plot_macro.cpp\n
-///  to run and generate the plot "QuarkPotential_root.png".
+///  $ root 'plot_macro.cpp(time, r_max)'\n
+///  to run and generate the plot "QuarkPotential_root.png"
+///  (note: time and r_max are the arguments of plot_macro()).
 ///
 ///////////////////////////////////////////////////////////
 #include <algorithm>
@@ -38,20 +39,24 @@ double fitfunction(double* x, double* par)
 /// Plot macro
 ///
 /// Main function of the plot macro
-int plot_macro()
+/// \param time time in lattice spacing units at which the asymptotic estimate
+///             for the potential is extracted
+/// \param r_max maximum value of the coordinate r in lattice spacing units to display
+///              on the plot 
+int plot_macro(int time, int r_max)
 {
   // Define the name of the input file containing data
-  std::string filename = "RXT_potential_plot_file.dat";
+  std::string filename = "RXT_potential_file.dat";
 
   // Define the root 1D function to be used in plot and fit
-  TF1* f = new TF1("fit", fitfunction, 0.1, 4.5, 3);
+  TF1* f = new TF1("fit", fitfunction, 0.1, 50., 3);
 
   // Set some useful properties, initialize parameters
   f->SetName("myfit");
   f->SetLineColor(2);
   f->SetParameters(5., 5., 0.);
   f->SetParLimits(0, -10., 10.);
-  f->SetParLimits(1, 0., 10.);
+  f->SetParLimits(1, -10., 10.);
   f->SetParLimits(2, -10., 10.);
   f->SetParNames("sigma", "b", "c");
 
@@ -65,7 +70,10 @@ int plot_macro()
   // Open the data file
   std::ifstream infile(filename);
   std::string waste;
+  char colon = ':';
   int nR = 0;
+  int nT = 0;
+  int file_time = 0;
   int n[4] = {0, 0, 0, 0};
   double r = 0., V = 0., V_error = 0.;
 
@@ -73,12 +81,25 @@ int plot_macro()
   if (infile) {
     infile.ignore(500, '\n');
     infile >> waste >> waste >> n[0] >> n[1] >> n[2] >> n[3];
-    nR = (int)(min({n[0], n[1], n[2]}) / 2.) - 1;
-    for (int i = 0; i < 14; i++) infile.ignore(500, '\n');
-    for (int i = 0; i < nR; i++) {
-      infile >> r >> V >> V_error;
-      gr->AddPoint(r, V);
-      gr->SetPointError(i, 0., V_error);
+    nR = (int)(min({n[0], n[1], n[2]}) / 2.);
+	nT = (int)(n[3] / 2.) - 1;
+	if (time > nT) time = nT;
+	if (r_max > nR) r_max = nR;
+    for (int i = 0; i < 15; i++) infile.ignore(500, '\n');
+	// Position the stream at the selected time
+	for (int i = 1; i <= nT; i++) {
+	  infile >> file_time;
+	  if (file_time == time) break;
+	  else infile.ignore(500, '\n');
+	}
+	std::cout << "Building the plot with the following data:\n";
+    std::cout << "r/a    aV(r)    error\n";
+	// Data acquisition
+    for (int i = 1; i <= r_max; i++) {
+      infile >> V >> colon >> V_error;
+	  std::cout << i << "   " << V << "   " << V_error << std::endl;
+      gr->AddPoint(i, V);
+      gr->SetPointError(i-1, 0., V_error);
     }
   } else {
     std::cout << "ERROR: " << filename << " not found\n";
@@ -87,8 +108,8 @@ int plot_macro()
 
   // Tune some graphical aspects
   gr->SetTitle("Quark Potential");
-  gr->GetXaxis()->SetLimits(0., 5.);
-  gr->GetXaxis()->SetRangeUser(0., 5.);
+  gr->GetXaxis()->SetLimits(0., (double)r_max + 10.);
+  gr->GetXaxis()->SetRangeUser(0., (double)r_max + 1.);
   gr->GetXaxis()->SetLabelSize(0.05);
   gr->GetXaxis()->SetTitleSize(0.05);
   gr->GetXaxis()->SetLabelOffset(0.008);
@@ -96,7 +117,7 @@ int plot_macro()
   gr->GetXaxis()->SetTitle("r/a");
   gr->GetXaxis()->CenterTitle(true);
   gr->GetYaxis()->SetTitle("aV(r)");
-  gr->GetYaxis()->SetLimits(-5., 15.);
+  gr->GetYaxis()->SetLimits(-5., 100.);
   gr->GetYaxis()->SetRangeUser(0., 12.);
   gr->GetYaxis()->SetLabelSize(0.05);
   gr->GetYaxis()->SetTitleSize(0.05);
@@ -124,6 +145,8 @@ int plot_macro()
   legend->Draw("same");
 
   // Save plot into a file
-  c->Print("QuarkPotential_root.png");
+  std::string plot_name = "QuarkPotential_root_T" + to_string(time)
+                          + "_Rmax" + to_string(r_max) + ".png";
+  c->Print(plot_name.c_str());
   return 0;
 }

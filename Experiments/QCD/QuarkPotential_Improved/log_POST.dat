@@ -5,4 +5,4 @@ Progress %: 0 - 10 - 20 - 30 - 40 - 50 - 60 - 70 - 80 - 90 - 100
 Printing on file "RXT_loops_file.dat"
 Printing on file "RXT_potential_file.dat"
 Printing on file "RXT_potential_plot_file.dat"
-Execution time: 0.807961 min
+Execution time: 0.420016 min

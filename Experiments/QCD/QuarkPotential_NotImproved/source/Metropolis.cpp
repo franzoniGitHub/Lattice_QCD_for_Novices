@@ -422,8 +422,8 @@ void Metropolis::ComputeRxTWilsonLoops() const
 {
   std::cout << "Computing RxT Wilson loops..\nProgress %: " << std::flush;
   std::vector<int> n = fPath.GetNCells();
-  // Define the max loop dimensions in the R and T directions as half the grid dimensions
-  const int nR = (int)(std::min({n[0], n[1], n[2]}) / 2.) - 1;
+  // Define the max loop dimensions in the R and T directions as (approximately) half the grid dimensions
+  const int nR = (int)(std::min({n[0], n[1], n[2]}) / 2.);
   const int nT = (int)(n[3] / 2.);
   // Define the matrices containing the results for the RxT loop dimension
   std::vector<std::vector<double>> estimators, errors, square_estimators, old_estimators;

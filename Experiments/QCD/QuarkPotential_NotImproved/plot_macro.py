@@ -7,7 +7,9 @@
 #  QCD_POST.cpp output of the method
 #  Metropolis::ComputeRxTWilsonLoops which is stored in the file
 #  RXT_potential_plot_file.dat. Various graphical
-#  options are implemented and tuned in the code. Type:\n
+#  options are implemented and tuned in the code. Set the maximum
+#  value of r/a (r_max) to be displayed in the PARAMETER section
+#  of the script. Type:\n
 #  $ python plot_macro.py\n
 #  to run and generate the plot "QuarkPotential_py.png".
 import numpy as np
@@ -36,13 +38,17 @@ def fitplot_py(r,sigma,b,c):
 ## \cond MAIN
 #************** EXECUTION ******************#
 
+#************** PARAMETER ******************#
+r_max=3
+#*******************************************#
+
 input_name="SETTINGS.h"
 output_name="QuarkPotential_py.png"
 
 data=genfromtxt('RXT_potential_plot_file.dat', delimiter='\t', skip_header=15)
-x=data[:,0]
-result=data[:,1]
-error=data[:,2]
+x=data[:r_max,0]
+result=data[:r_max,1]
+error=data[:r_max,2]
 n_data=x.size
 
 par=np.zeros(3)
@@ -50,7 +56,7 @@ par[0]=5.
 par[1]=5.
 par[2]=0.
 #Fit data to the fitting function using the least square method implemented in the the scipy function
-fit_lsq = least_squares(fitfunction_py, par, bounds=([-10,0,-10],[10,10,10]), loss='soft_l1', args=(x[:], result[:]))
+fit_lsq = least_squares(fitfunction_py, par, loss='soft_l1', args=(x[:], result[:])) #bounds=([-10.,10.],[-10.,10.],[-10.,10.]),
 x_fit = np.linspace(x[0], x[n_data-1],500) #generation of points for the graph
 y_fit = fitplot_py(x_fit, *fit_lsq.x) #generation of points for the graph
 

@@ -117,8 +117,13 @@ int main()
 ///
 /// \section plot How to plot
 ///  - Using ROOT \n
-///    $ root plot_macro.cpp
+///    $ root 'plot_macro.cpp(time, r_max)' \n
+///    where time and r_max are the arguments of plot_macro()
 ///  - Using Python \n
+///    Set the maximum value of r/a (r_max) to be displayed in the PARAMETER section
+///    of the script. In the python script, it is not possible to tune an anologue of
+///    the ROOT 'time' parameter: the latest available time is used as the asymptotic value.
+///    To run the script, type: \n
 ///    $ python plot_macro.py
 ///
 /// \section clean How to Clean

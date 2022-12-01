@@ -102,8 +102,10 @@ How to Build and Run</h1>
 How to plot</h1>
 <ul>
 <li>Using ROOT <br />
- $ root <a class="el" href="plot__macro_8cpp.html" title="ROOT macro to generate a plot from the QCD_POST.cpp output. ">plot_macro.cpp</a></li>
+ $ root 'plot_macro.cpp(time, r_max)' <br />
+ where time and r_max are the arguments of <a class="el" href="plot__macro_8cpp.html#a382bcf4b4422cd8760a8ca6f47cf725b">plot_macro()</a></li>
 <li>Using Python <br />
+ Set the maximum value of r/a (r_max) to be displayed in the PARAMETER section of the script. In the python script, it is not possible to tune an anologue of the ROOT 'time' parameter: the latest available time is used as the asymptotic value. To run the script, type: <br />
  $ python <a class="el" href="plot__macro_8py.html" title="Python macro to generate a plot from the QCD_POST.cpp output. ">plot_macro.py</a></li>
 </ul>
 <h1><a class="anchor" id="clean"></a>
